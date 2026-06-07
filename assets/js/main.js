@@ -5,7 +5,10 @@
   "use strict";
 
   const STORE = "eb_lang";
-  let lang = localStorage.getItem(STORE) || (navigator.language || "tr").slice(0, 2).toLowerCase();
+  const urlLang = new URLSearchParams(location.search).get("lang");
+  let lang = (urlLang === "en" || urlLang === "tr")
+    ? urlLang
+    : (localStorage.getItem(STORE) || (navigator.language || "tr").slice(0, 2).toLowerCase());
   if (lang !== "en") lang = "tr";
 
   /* ---------- helpers ---------- */
@@ -22,7 +25,8 @@
   function posterMarkup(p) {
     if (p.img) {
       const cls = p.sq ? "contain" : "";
-      return `<div class="proj-poster"><img class="${cls}" src="assets/img/${p.img}" alt="${p.t}" loading="lazy" width="92" height="92"></div>`;
+      const alt = `${p.t} — Engin Bayrak afiş/kapak`;
+      return `<div class="proj-poster"><img class="${cls}" src="assets/img/${p.img}" alt="${alt}" loading="lazy" width="92" height="92"></div>`;
     }
     return `<div class="proj-poster placeholder"><span class="ph-glyph"></span><span class="ph-initials">${initials(p.t)}</span></div>`;
   }
@@ -32,9 +36,23 @@
     return `${p.y} &middot; ${typ}`;
   }
 
+  /* keep URL + canonical self-referencing per locale (valid hreflang set) */
+  function syncUrlAndCanonical() {
+    const base = location.origin + location.pathname;
+    const target = lang === "en" ? base + "?lang=en" : base;
+    try { history.replaceState(null, "", target); } catch (e) {}
+    const canon = document.querySelector('link[rel="canonical"]');
+    if (canon) canon.href = target;
+    const ogu = document.querySelector('meta[property="og:url"]');
+    if (ogu) ogu.setAttribute("content", target);
+    const ogl = document.querySelector('meta[property="og:locale"]');
+    if (ogl) ogl.setAttribute("content", lang === "en" ? "en_US" : "tr_TR");
+  }
+
   /* ---------- apply language ---------- */
   function applyLang() {
     document.documentElement.lang = lang;
+    syncUrlAndCanonical();
     $$("[data-i18n]").forEach((el) => { el.innerHTML = t(el.getAttribute("data-i18n")); });
     $$("[data-i18n-ph]").forEach((el) => { el.setAttribute("placeholder", t(el.getAttribute("data-i18n-ph"))); });
     $$(".lang-toggle button").forEach((b) => b.classList.toggle("active", b.dataset.lang === lang));
@@ -67,7 +85,7 @@
       const catName = (CATEGORIES.find((c) => c.id === cat) || {})[lang] || "";
       let thumb;
       if (p.img) {
-        thumb = `<div class="thumb"><img class="${p.sq ? "contain" : ""}" src="assets/img/${p.img}" alt="${p.t}" loading="lazy"></div>`;
+        thumb = `<div class="thumb"><img class="${p.sq ? "contain" : ""}" src="assets/img/${p.img}" alt="${p.t} — Engin Bayrak afiş/kapak" loading="lazy" width="300" height="300"></div>`;
       } else {
         thumb = `<div class="thumb proj-poster placeholder" style="border:none"><span class="ph-glyph"></span><span class="ph-initials" style="font-size:48px">${initials(p.t)}</span></div>`;
       }
