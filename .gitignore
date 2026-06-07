@@ -1,0 +1,8 @@
+# Source EPK/CV documents (kept locally, not part of the published site)
+*.doc
+*.docx
+Engin Bayrak - Resim - Duvar (Sepia) (JPEG) 3.jpg
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
