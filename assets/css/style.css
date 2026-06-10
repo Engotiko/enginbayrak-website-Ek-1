@@ -346,6 +346,15 @@ p { margin: 0 0 18px; }
 .highlight .h-val { color: var(--ink); }
 
 /* ==========================================================================
+   FAQ (AI-extractable Q&A)
+   ========================================================================== */
+.faq { margin-top: 6px; }
+.faq-item { padding: 22px 0; border-top: var(--frame) solid var(--line-soft); }
+.faq-item:first-child { border-top: none; }
+.faq-q { font-family: var(--font-nh); font-weight: 300; font-size: clamp(19px, 2.4vw, 24px); letter-spacing: -0.02em; color: var(--red); margin: 0 0 8px; }
+.faq-a { color: var(--ink); margin: 0; max-width: 74ch; }
+
+/* ==========================================================================
    PROJECTS
    ========================================================================== */
 .proj-head { padding: 44px 28px; border-bottom: var(--frame) solid var(--line); }

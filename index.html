@@ -34,23 +34,44 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Engin Bayrak",
-    "jobTitle": "Composer, Musician, Writer",
-    "url": "https://www.enginbayrak.com/",
-    "image": "assets/img/engin-portrait.jpg",
-    "birthDate": "1979-12-12",
-    "birthPlace": "Germany",
-    "email": "engin@enginbayrak.com",
-    "sameAs": [
-      "https://www.enginbayrak.com",
-      "https://open.spotify.com/intl-tr/artist/7616xApq2m3kp7roCKe1QH",
-      "https://music.apple.com/tr/artist/engin-bayrak/271636802",
-      "https://www.youtube.com/user/EnginBayrakComposer",
-      "https://www.instagram.com/enginbayrakmusic/",
-      "https://www.facebook.com/enginbayrakcomposer",
-      "https://tr.wikipedia.org/wiki/Engin_Bayrak",
-      "https://www.imdb.com/name/nm4250349/"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginbayrak.com/#website",
+        "url": "https://www.enginbayrak.com/",
+        "name": "Engin Bayrak",
+        "inLanguage": ["tr", "en"],
+        "about": { "@id": "https://www.enginbayrak.com/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.enginbayrak.com/#person",
+        "name": "Engin Bayrak",
+        "description": "Film, dizi ve tiyatro müzikleriyle tanınan Türk besteci, müzisyen ve yazar.",
+        "jobTitle": ["Besteci", "Müzisyen", "Yazar", "Aranjör", "Müzik Yönetmeni"],
+        "url": "https://www.enginbayrak.com/",
+        "mainEntityOfPage": "https://www.enginbayrak.com/biyografi",
+        "image": "https://www.enginbayrak.com/assets/img/engin-portrait.jpg",
+        "birthDate": "1979-12-12",
+        "birthPlace": { "@type": "Place", "name": "Almanya" },
+        "nationality": "Turkish",
+        "gender": "Male",
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Ege Üniversitesi" },
+        "knowsAbout": ["Film müziği", "Dizi müziği", "Tiyatro müziği", "Besteci", "Aranjman", "World müzik", "Balkan müziği", "Electronica"],
+        "email": "engin@enginbayrak.com",
+        "sameAs": [
+          "https://open.spotify.com/intl-tr/artist/7616xApq2m3kp7roCKe1QH",
+          "https://music.apple.com/tr/artist/engin-bayrak/271636802",
+          "https://www.youtube.com/user/EnginBayrakComposer",
+          "https://www.instagram.com/enginbayrakmusic/",
+          "https://www.facebook.com/enginbayrakcomposer",
+          "https://tr.wikipedia.org/wiki/Engin_Bayrak",
+          "https://www.imdb.com/name/nm4250349/"
+        ]
+      },
+      { "@type": "Movie", "name": "İncir Reçeli", "datePublished": "2011", "musicBy": { "@id": "https://www.enginbayrak.com/#person" } },
+      { "@type": "TVSeries", "name": "Yedi Güzel Adam", "startDate": "2014", "endDate": "2015", "numberOfEpisodes": 39, "musicBy": { "@id": "https://www.enginbayrak.com/#person" } },
+      { "@type": "MusicAlbum", "name": "Electra Symphony", "datePublished": "2006", "byArtist": { "@id": "https://www.enginbayrak.com/#person" } }
     ]
   }
   </script>
