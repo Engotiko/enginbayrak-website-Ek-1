@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://engotiko.github.io/enginbayrak-website-Ek-1/sitemap.xml
+Sitemap: https://www.enginbayrak.com/sitemap.xml

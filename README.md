@@ -2,7 +2,7 @@
 
 Besteci, müzisyen ve yazar **Engin Bayrak** için iki dilli (Türkçe / İngilizce), statik, çok sayfalı tanıtım web sitesi.
 
-🔗 **Canlı:** https://engotiko.github.io/enginbayrak-website-Ek-1/
+🔗 **Canlı:** https://www.enginbayrak.com/
 
 ## Özellikler
 - **Statik** site — HTML, CSS ve sade JavaScript (derleme adımı yok).
@@ -33,6 +33,20 @@ sitemap.xml, robots.txt
 python3 -m http.server 8000
 # http://localhost:8000
 ```
+
+## İçerik güncelleme & derleme (önemli)
+Proje listesi, öne çıkanlar ve biyografi metni **iki yerde** bulunur: çalışma zamanı için `assets/js/*` (JS render + dil geçişi) **ve** SEO/crawler için statik HTML'e önceden basılmış (pre-render) kopya. Veriyi değiştirdikten sonra statik kopyayı tazelemek gerekir:
+
+```bash
+# Yeni proje eklemek: assets/js/data.js içindeki ilgili kategoriye {t,y,type,img,sq,note} ekle
+node build.mjs   # projeler/öne çıkanlar/biyografiyi statik HTML'e yeniden basar
+```
+
+`build.mjs`, `<!--BUILD:x-->...<!--/BUILD:x-->` işaretleri arasını günceller; idempotenttir (tekrar çalıştırmak içeriği çoğaltmaz). Statik içerik JS olmadan da görünür (`.js` sınıfı yoksa animasyon gizlemesi devre dışı).
+
+## Yayın & alan adı
+- **Canonical domain:** `https://www.enginbayrak.com` (tüm canonical/hreflang/og:url/sitemap bunu kullanır).
+- **Cloudflare Pages** ana domaini sunar; **GitHub Pages** (`CNAME` dosyası ile) `engotiko.github.io` adresini canonical domaine 301 yönlendirir.
 
 ## Kaynaklar
 İçerik resmi EPK/CV belgelerinden ve şu kaynaklardan derlenmiştir:

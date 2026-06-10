@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://engotiko.github.io/enginbayrak-website-Ek-1/</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://engotiko.github.io/enginbayrak-website-Ek-1/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://engotiko.github.io/enginbayrak-website-Ek-1/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://engotiko.github.io/enginbayrak-website-Ek-1/"/>
+    <loc>https://www.enginbayrak.com/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.enginbayrak.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.enginbayrak.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.enginbayrak.com/"/>
     <lastmod>2026-06-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://engotiko.github.io/enginbayrak-website-Ek-1/biyografi.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://engotiko.github.io/enginbayrak-website-Ek-1/biyografi.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://engotiko.github.io/enginbayrak-website-Ek-1/biyografi.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://engotiko.github.io/enginbayrak-website-Ek-1/biyografi.html"/>
+    <loc>https://www.enginbayrak.com/biyografi.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.enginbayrak.com/biyografi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.enginbayrak.com/biyografi.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.enginbayrak.com/biyografi.html"/>
     <lastmod>2026-06-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://engotiko.github.io/enginbayrak-website-Ek-1/projeler.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://engotiko.github.io/enginbayrak-website-Ek-1/projeler.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://engotiko.github.io/enginbayrak-website-Ek-1/projeler.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://engotiko.github.io/enginbayrak-website-Ek-1/projeler.html"/>
+    <loc>https://www.enginbayrak.com/projeler.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.enginbayrak.com/projeler.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.enginbayrak.com/projeler.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.enginbayrak.com/projeler.html"/>
     <lastmod>2026-06-07</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://engotiko.github.io/enginbayrak-website-Ek-1/iletisim.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://engotiko.github.io/enginbayrak-website-Ek-1/iletisim.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://engotiko.github.io/enginbayrak-website-Ek-1/iletisim.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://engotiko.github.io/enginbayrak-website-Ek-1/iletisim.html"/>
+    <loc>https://www.enginbayrak.com/iletisim.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.enginbayrak.com/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.enginbayrak.com/iletisim.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.enginbayrak.com/iletisim.html"/>
     <lastmod>2026-06-07</lastmod>
     <priority>0.7</priority>
   </url>

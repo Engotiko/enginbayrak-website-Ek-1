@@ -36,15 +36,28 @@
     return `${p.y} &middot; ${typ}`;
   }
 
-  /* keep URL + canonical self-referencing per locale (valid hreflang set) */
+  /* Keep canonical/og:url anchored to the FIXED canonical domain (read from the
+     static tag's base), only toggling the ?lang suffix. Never rebuild from
+     location.origin — otherwise a mirror host (e.g. github.io) would rewrite the
+     canonical back to itself. The visible URL bar stays on the current origin. */
+  function withLang(base) {
+    base = (base || "").split("?")[0];
+    return lang === "en" ? base + "?lang=en" : base;
+  }
   function syncUrlAndCanonical() {
-    const base = location.origin + location.pathname;
-    const target = lang === "en" ? base + "?lang=en" : base;
-    try { history.replaceState(null, "", target); } catch (e) {}
+    // visible URL bar: current origin, just toggle the lang param
+    const visible = location.pathname + (lang === "en" ? "?lang=en" : "");
+    try { history.replaceState(null, "", visible); } catch (e) {}
     const canon = document.querySelector('link[rel="canonical"]');
-    if (canon) canon.href = target;
+    if (canon) {
+      if (!canon.dataset.base) canon.dataset.base = canon.getAttribute("href");
+      canon.setAttribute("href", withLang(canon.dataset.base));
+    }
     const ogu = document.querySelector('meta[property="og:url"]');
-    if (ogu) ogu.setAttribute("content", target);
+    if (ogu) {
+      if (!ogu.dataset.base) ogu.dataset.base = ogu.getAttribute("content");
+      ogu.setAttribute("content", withLang(ogu.dataset.base));
+    }
     const ogl = document.querySelector('meta[property="og:locale"]');
     if (ogl) ogl.setAttribute("content", lang === "en" ? "en_US" : "tr_TR");
   }

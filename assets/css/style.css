@@ -452,10 +452,12 @@ p { margin: 0 0 18px; }
 /* ==========================================================================
    Animations (revealed by IntersectionObserver)
    ========================================================================== */
-.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.in { opacity: 1; transform: none; }
+/* Reveal animation only applies when JS is active (.js on <html>). Without JS
+   the content stays fully visible — important for crawlers and no-JS users. */
+.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
 }
 
