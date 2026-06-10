@@ -10,26 +10,26 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.enginbayrak.com/biyografi.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.enginbayrak.com/biyografi.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.enginbayrak.com/biyografi.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.enginbayrak.com/biyografi.html"/>
+    <loc>https://www.enginbayrak.com/biyografi</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.enginbayrak.com/biyografi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.enginbayrak.com/biyografi?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.enginbayrak.com/biyografi"/>
     <lastmod>2026-06-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.enginbayrak.com/projeler.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.enginbayrak.com/projeler.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.enginbayrak.com/projeler.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.enginbayrak.com/projeler.html"/>
+    <loc>https://www.enginbayrak.com/projeler</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.enginbayrak.com/projeler"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.enginbayrak.com/projeler?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.enginbayrak.com/projeler"/>
     <lastmod>2026-06-07</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.enginbayrak.com/iletisim.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.enginbayrak.com/iletisim.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.enginbayrak.com/iletisim.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.enginbayrak.com/iletisim.html"/>
+    <loc>https://www.enginbayrak.com/iletisim</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.enginbayrak.com/iletisim"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.enginbayrak.com/iletisim?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.enginbayrak.com/iletisim"/>
     <lastmod>2026-06-07</lastmod>
     <priority>0.7</priority>
   </url>
